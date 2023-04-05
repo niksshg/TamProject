@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">FitBud</string>
+    <!-- nav bar -->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Statistics</string>
+    <string name="title_notifications">Quests</string>
+    <string name="tam_home_page"> BuddyHome</string>
+
+    <!-- name of share pref file -->
+    <!-- shared pref key strings start -->
+    <string name="step_preferences_file_key" translatable="false">com.masterproject.fittam.STEPS_PREFERENCE_FILE_KEY</string>
+    <!-- strings for main screen -->
+    <string name="saved_step_count">Steps Count</string>
+    <string name="saved_calories_count">Calories </string>
+    <string name="saved_distance_count">Distance</string>
+    <string name="saved_active_minutes_count"> Active Min</string>
+
+    <!-- tamagotchi -->
+    <string name="happiness_title">Happiness</string>
+    <string name="fitness_goal">Fitness Goal</string>
+    <string name="bud_state"> Tamagotchi state</string>
+    <string name="bud_happiness">Tamagotchi Happiness</string>
+    <string name="bud_name">Tamagotchu name</string>
+    <string name="goal_achieved">Whether goal was achieved</string>
+
+    <!-- booleans for goal and quest-->
+    <string name="whether_step_quest_should_be_created"> Step quest</string>
+    <string name="whether_activity_quest_should_be_created"> Activity Quest</string>
+    <string name="quest_perfomance_evaluated">Quest Perfomance Evaluated</string>
+    <!-- shared pref strings [END] -->
+
+    <!-- notifications -->
+    <string name="notification_channel_regular">Regular Notifications channel</string>
+    <string name="notification_channel_idle">Notification channel device idle</string>
+    <string name="notification_channel_goal"> Notification about daily goal achievements </string>
+
+    <string name="progress_notification_title"> Mood </string>
+    <string name="idle_notification_title"> Its time ...</string>
+    <string name="goal_notification_title"> Todays goal ..</string>
+
+
+
+    <!-- was trying to address translation issue, to display content on the devices with different system languages -->
+    <string name="progress_notification_context" translatable="false"> </string>
+
+</resources>

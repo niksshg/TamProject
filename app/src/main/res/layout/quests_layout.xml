@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- this layout inflates recycler in the activity quest -->
+    <!-- CardView - container for each view created by the adapter, it allows to visually separate each entry -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/questData_CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp">
+        <!-- within each card, items are positioned using the relative layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/quest_name_view"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:fontFamily="monospace"
+                android:textSize="25sp"
+                tools:text="View Quest" />
+
+
+            <TextView
+                android:id="@+id/quest_description_view"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/quest_name_view"
+                android:fontFamily="monospace"
+                android:textSize="22sp"
+                tools:text="View Description" />
+
+            <TextView
+                android:id="@+id/quest_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quest_aim"
+                android:layout_toRightOf="@id/quest_name_view"
+                android:fontFamily="monospace"
+                android:textColor="#000"
+                android:textSize="18sp"
+                tools:text="View Porgress" />
+
+            <TextView
+                android:id="@+id/quest_aim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quest_description_view"
+                android:layout_gravity="center_vertical|center"
+                android:layout_toRightOf="@id/quest_name_view"
+                android:fontFamily="monospace"
+                android:textColor="#000"
+                android:textSize="15sp"
+                tools:text="View Aim" />
+
+            <TextView
+                android:id="@+id/quest_happiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quest_progress"
+                android:layout_gravity="center_vertical|center"
+                android:layout_toRightOf="@id/quest_name_view"
+                android:fontFamily="monospace"
+                android:textColor="#000"
+                android:textSize="15sp"
+                tools:text="View Happines" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

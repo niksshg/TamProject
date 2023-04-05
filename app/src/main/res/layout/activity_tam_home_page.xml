@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.masterproject.fittam.MainActivity"
+    android:background="@drawable/beach_tamhome_1">
+
+    <!-- "happiness" above the happiness bar -->
+    <TextView
+        android:id="@+id/happy_title_view"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/happiness_title"
+        app:layout_constraintBottom_toTopOf="@+id/happiness_level_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- happiness progress bar -->
+    <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
+        android:id="@+id/happiness_level_view"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/happy_title_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="528dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272"
+        app:rcBackgroundPadding="5dp"
+        app:rcRadius="100dp"
+        app:rcReverse="false" />
+
+    <!-- edit text for the fitnesss buddy name -->
+    <EditText
+        android:id="@+id/bud_name"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="397dp"
+        android:layout_height="88dp"
+        android:layout_above="@+id/fitBud_View"
+        android:layout_below="@+id/happiness_level_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cloud_pixel2"
+        android:hint="Your fitness bud name"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/fitBud_View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happiness_level_view"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <!-- picture of the fitness buddy-->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fitBud_View"
+        android:layout_width="244dp"
+        android:layout_height="427dp"
+        android:layout_below="@id/happiness_level_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happiness_level_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- text view for the message from the fitness buddy-->
+    <TextView
+        android:id="@+id/bud_speaking"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="283dp"
+        android:layout_height="226dp"
+        android:layout_below="@id/happiness_level_view"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/fitBud_View"
+        android:background="@drawable/speech_bulb14"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toStartOf="@+id/fitBud_View"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392"
+        tools:text="Text Sample" />
+
+    <!-- the seagull -->
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="84dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/seagull_gif"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toStartOf="@+id/fitBud_View"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bud_speaking"
+        app:layout_constraintVertical_bias="0.893" />
+
+    <!-- +1 displayed when the buddy is touched -->
+    <TextView
+        android:id="@+id/increaseInHappines"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="51dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="+1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happiness_level_view"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <!-- nav bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
